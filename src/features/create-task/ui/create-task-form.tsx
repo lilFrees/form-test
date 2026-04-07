@@ -48,6 +48,8 @@ export default function CreateTaskForm() {
 
   const isRoutine = watch("is_routine");
   const forTeam = watch("for_team");
+  const context = watch("context");
+  const routineDescription = watch("routine_description");
 
   useEffect(() => {
     if (forTeam) {
@@ -145,7 +147,7 @@ export default function CreateTaskForm() {
                 maxLength={4096}
               />
               <span className="text-secondary absolute right-4 bottom-4 text-[12px]">
-                0 / 4096
+                {context.length} / 4096
               </span>
               {errors.context && (
                 <span className="text-sm text-red-500">
@@ -260,7 +262,7 @@ export default function CreateTaskForm() {
                     placeholder="Описание рутинной задачи"
                   />
                   <span className="text-secondary absolute right-4 bottom-4 text-[12px]">
-                    0 / 4096
+                    {routineDescription.length} / 4096
                   </span>
                   {errors.routine_description && (
                     <span className="text-sm text-red-500">
