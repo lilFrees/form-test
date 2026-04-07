@@ -5,7 +5,7 @@ import CreateTaskForm from "./create-task-form";
 
 export default function CreateTaskModal() {
   return (
-    <Dialog.Root open>
+    <Dialog.Root>
       <Dialog.Trigger>
         <Button>+ Create new task</Button>
       </Dialog.Trigger>
